@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "es6", // ✅ bump from es5 → es6 (for ESM support)
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // ✅ use esnext for modern libs
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node", // ✅ switch from 'bundler' → 'node'
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "react",
+      "react-dom",
+      "node"
+    ],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
